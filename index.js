@@ -13,8 +13,7 @@ const ai = new GoogleGenAI({ apiKey: "AIzaSyBhppoYCRl2KCkSPvdW67eCaRzRoy0P64E" }
 
 
 app.get('/', (req, res) => {
-  console.log("Server is running");
-  res.send('Hello World!');
+  res.send('Kya Dekh rahi ho sweetheart?');
 });
 
 app.post('/recipe', async (req, res) => {
