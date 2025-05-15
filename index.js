@@ -5,11 +5,13 @@ const { jsonrepair } = require('jsonrepair');
 const app = express();
 const port = 3001;
 const cors = require('cors');
+const dotenv = require('dotenv');
+dotenv.config();
 
 app.use(cors("*"));
 app.use(express.json());
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyBhppoYCRl2KCkSPvdW67eCaRzRoy0P64E" });
+const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API });
 
 
 app.get('/', (req, res) => {
